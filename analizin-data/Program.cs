@@ -20,11 +20,9 @@ for (int i = 0; i < n.Length; i++)
 {
     n[i] = int.Parse(Console.ReadLine());
 }
-Console.WriteLine(n.Average());
+Console.WriteLine(Math.Round(n.Average(),2));
 Console.WriteLine(months[(indexMax(n).ToString())] + " " + n.Max()) ;
 Console.WriteLine(months[(indexMin(n).ToString())] + " " + n.Min());
-
-
 int indexMin(int[] n)
 {
     int i = 0;
@@ -33,7 +31,7 @@ int indexMin(int[] n)
     {
         if (n[f] == x)
         {
-            i = f;
+            i = f+1;
             break;
         }
     }
@@ -47,7 +45,7 @@ int indexMax (int[] n)
     {
         if (n[f] == x)
         {
-            i = f;
+            i = f+1;
             break;
         }
     }
